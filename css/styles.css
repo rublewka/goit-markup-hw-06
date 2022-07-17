@@ -762,7 +762,9 @@ body {
   margin: 0;
 }
 
-.filters .filter {
+
+.filter-button {
+  display: inline-block;
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
@@ -775,18 +777,21 @@ body {
   line-height: 1.6;
   text-align: center;
 
+  cursor: pointer;
+
   transition:
     background-color var(--hover-time) var(--hover-function),
     color var(--hover-time) var(--hover-function),
     box-shadow var(--hover-time) var(--hover-function);
 }
 
+
 .filters-item:not(:nth-last-child(1)) {
   margin-right: 8px;
 }
 
-.filters .filter:hover,
-.filters .filter:focus {
+
+.filter:checked+.filter-button {
   background-color: var(--acent-color);
   color: var(--alternative-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
