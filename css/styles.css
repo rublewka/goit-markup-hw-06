@@ -387,6 +387,7 @@ body {
     backgroun-color var(--hover-time) var(--hover-function);
 }
 
+.agree-check:hover+.agree-check-ico,
 .agree-check:focus+.agree-check-ico {
   border: 2px solid var(--acent-color);
 }
