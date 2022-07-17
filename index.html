@@ -44,7 +44,7 @@
     </div>
   </header>
   <main>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form name="personal-data" method="post">
           <button class="close-button" type="button" data-modal-close>
@@ -53,115 +53,127 @@
             </svg>
           </button>
           <strong class="modal-title">Оставьте свои данные, мы вам перезвоним</strong>
-          <label>
+          <label class="label label-name">
             <span class="form-name">Имя</span>
-            <input class="client client-name" name="client-name" type="text">
+            <input class="user user-name" name="user-name" type="text" required>
+            <svg class="user-ico" width="18" height="18">
+              <use href="./images/icons.svg#icon-man-modal"></use>
+            </svg>
           </label>
-          <label>
+          <label class="label">
             <span class="form-name">Телефон</span>
-            <input class="client client-tel" name="client-name" type="tel">
+            <input class="user user-tel" name="user-tel" type="tel" required>
+            <svg class="user-ico" width="18" height="18">
+              <use href="./images/icons.svg#icon-phone-modal"></use>
+            </svg>
           </label>
-          <label>
+          <label class="label">
             <span class="form-name">Почта</span>
-            <input class="client client-email" name="client-name" type="email">
+            <input class="user user-email" name="user-email" type="email" required>
+            <svg class="user-ico" width="18" height="18">
+              <use href="./images/icons.svg#icon-envelope-modal"></use>
+            </svg>
           </label>
           <label>
             <span class="form-name">Комментарий</span>
-            <textarea class="client-coment" name="client-coment" placeholder="Введите текст"></textarea>
+            <textarea class="user-coment" name="user-coment" placeholder="Введите текст"></textarea>
           </label>
           <label class="terms-agree">
-            <input type="checkbox" name="terms-agree-check" class="agree-check visually-hidden ">
-            <span class="agree-check-ico-thumb">
-              <svg class="agree-check-ico" width="16" height="15">
-                <use href="./images/icons.svg#icon-check"></use>
-              </svg>
-            </span>
+            <input type="checkbox" name="terms-agree-check" class="agree-check visually-hidden">
+            <svg class="agree-check-ico" width="16" height="15">
+              <use href="./images/icons.svg#icon-check"></use>
+            </svg>
+            <!-- <span class="agree-check-ico"></span> -->
             <em class="terms-agree-text">Соглашаюсь с рассылкой и принимаю
               <a class="terms-agree-link" href="">Условия договора</a>
             </em>
           </label>
-          <button type="submit">Отправить</button>
+          <button class="modal-send" type="submit">Отправить</button>
         </form>
       </div>
     </div>
-    <div class="thumb">
-      <section class="hero">
+    <section class="hero">
+      <div class="thumb">
         <h1 class="hero-title">Эффективные решения<br>для вашего бизнеса</h1>
         <button type="button" class="button hero-button" data-modal-open>Заказать услугу</button>
-      </section>
-    </div>
-    <section class="quality container">
-      <!-- Наши качества это скрытый заголовок -->
-      <h2 class="visually-hidden ">Наши качества</h2>
-      <ul class="quality-list list">
-        <li class="quality-list-item">
-          <div class="quality-list-img-container">
-            <svg class="quality-list-img" width="70" height="70">
-              <use href="./images/icons.svg#icon-antena"></use>
-            </svg>
-          </div>
-          <h3 class="quality-list-item-title">Внимание к деталям</h3>
-          <p class="quality-list-item-description">
-            Идейные соображения, а также начало повседневной работы по формированию позиции.
-          </p>
-        </li>
-        <li class="quality-list-item">
-          <div class="quality-list-img-container">
-            <svg class="quality-list-img" width="70" height="70">
-              <use href="./images/icons.svg#icon-clock"></use>
-            </svg>
-          </div>
-          <h3 class="quality-list-item-title">Пунктуальность</h3>
-          <p class="quality-list-item-description">
-            Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
-          </p>
-        </li>
-        <li class="quality-list-item">
-          <div class="quality-list-img-container">
-            <svg class="quality-list-img" width="70" height="70">
-              <use href="./images/icons.svg#icon-diagram"></use>
-            </svg>
-          </div>
-          <h3 class="quality-list-item-title">Планирование</h3>
-          <p class="quality-list-item-description">
-            Равным образом консультация с широким активом в значительной степени обуславливает.
-          </p>
-        </li>
-        <li class="quality-list-item">
-          <div class="quality-list-img-container">
-            <svg class="quality-list-img" width="70" height="70">
-              <use href="./images/icons.svg#icon-astronaut"></use>
-            </svg>
-          </div>
-          <h3 class="quality-list-item-title">Современные технологии</h3>
-          <p class="quality-list-item-description">
-            Значимость этих проблем настолько очевидна, что реализация плановых заданий.
-          </p>
-        </li>
-      </ul>
+      </div>
     </section>
-    <section class="what-we-do container">
-      <h2 class="section-title">Чем мы занимаемся</h2>
-      <ul class="what-we-do-img-list list">
-        <li class="what-we-do-img-list-item">
-          <div class="thumb">
-            <h3 class="what-we-do-list-title">Десктопные приложения</h3>
-            <img src="./images/box1.jpg" alt="Работа за компьютером" width="370">
-          </div>
-        </li>
-        <li class="what-we-do-img-list-item">
-          <div class="thumb">
-            <h3 class="what-we-do-list-title">Мобильные приложения</h3>
-            <img src="./images/box2.jpg" alt="Заблокировал экран телефона" width="370">
-          </div>
-        </li>
-        <li class="what-we-do-img-list-item">
-          <div class="thumb">
-            <h3 class="what-we-do-list-title">Дизайнерские решения</h3>
-            <img src="./images/box3.jpg" alt="Выбор цвета на экране планшета" width="370">
-          </div>
-        </li>
-      </ul>
+    <section class="quality">
+      <!-- Наши качества это скрытый заголовок -->
+      <div class="container">
+        <h2 class="visually-hidden">Наши качества</h2>
+        <ul class="quality-list list">
+          <li class="quality-list-item">
+            <div class="quality-list-img-container">
+              <svg class="quality-list-img" width="70" height="70">
+                <use href="./images/icons.svg#icon-antena"></use>
+              </svg>
+            </div>
+            <h3 class="quality-list-item-title">Внимание к деталям</h3>
+            <p class="quality-list-item-description">
+              Идейные соображения, а также начало повседневной работы по формированию позиции.
+            </p>
+          </li>
+          <li class="quality-list-item">
+            <div class="quality-list-img-container">
+              <svg class="quality-list-img" width="70" height="70">
+                <use href="./images/icons.svg#icon-clock"></use>
+              </svg>
+            </div>
+            <h3 class="quality-list-item-title">Пунктуальность</h3>
+            <p class="quality-list-item-description">
+              Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
+            </p>
+          </li>
+          <li class="quality-list-item">
+            <div class="quality-list-img-container">
+              <svg class="quality-list-img" width="70" height="70">
+                <use href="./images/icons.svg#icon-diagram"></use>
+              </svg>
+            </div>
+            <h3 class="quality-list-item-title">Планирование</h3>
+            <p class="quality-list-item-description">
+              Равным образом консультация с широким активом в значительной степени обуславливает.
+            </p>
+          </li>
+          <li class="quality-list-item">
+            <div class="quality-list-img-container">
+              <svg class="quality-list-img" width="70" height="70">
+                <use href="./images/icons.svg#icon-astronaut"></use>
+              </svg>
+            </div>
+            <h3 class="quality-list-item-title">Современные технологии</h3>
+            <p class="quality-list-item-description">
+              Значимость этих проблем настолько очевидна, что реализация плановых заданий.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="what-we-do">
+      <div class="container">
+        <h2 class="section-title">Чем мы занимаемся</h2>
+        <ul class="what-we-do-img-list list">
+          <li class="what-we-do-img-list-item">
+            <div class="what-we-do-thumb">
+              <h3 class="what-we-do-list-title">Десктопные приложения</h3>
+              <img src="./images/box1.jpg" alt="Работа за компьютером" width="370">
+            </div>
+          </li>
+          <li class="what-we-do-img-list-item">
+            <div class="what-we-do-thumb">
+              <h3 class="what-we-do-list-title">Мобильные приложения</h3>
+              <img src="./images/box2.jpg" alt="Заблокировал экран телефона" width="370">
+            </div>
+          </li>
+          <li class="what-we-do-img-list-item">
+            <div class="what-we-do-thumb">
+              <h3 class="what-we-do-list-title">Дизайнерские решения</h3>
+              <img src="./images/box3.jpg" alt="Выбор цвета на экране планшета" width="370">
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="our-team">
       <div class="container">
@@ -169,8 +181,10 @@
         <ul class="our-team-list list">
           <li class="our-team-list-card">
             <img class="our-team-list-card-img" src="./images/igor.jpg" alt="Портрет Игоря" width="270">
-            <h3 class="our-team-list-card-name">Игорь Демьяненко</h3>
-            <p class="our-team-list-card-role" lang="en">Product Designer</p>
+            <div class="our-team-list-card-capture">
+              <h3 class="our-team-list-card-name">Игорь Демьяненко</h3>
+              <p class="our-team-list-card-role" lang="en">Product Designer</p>
+            </div>
             <ul class="soc-med-list">
               <li class="soc-med-item">
                 <a href="https://www.instagram.com/" class="soc-med-link" target="_blank">
@@ -204,8 +218,10 @@
           </li>
           <li class=" our-team-list-card">
             <img class="our-team-list-card-img" src="./images/olga.jpg" alt="Портрет Ольги" width="270">
-            <h3 class="our-team-list-card-name">Ольга Репина</h3>
-            <p class="our-team-list-card-role" lang="en">Frontend Developer</p>
+            <div class="our-team-list-card-capture">
+              <h3 class="our-team-list-card-name">Ольга Репина</h3>
+              <p class="our-team-list-card-role" lang="en">Frontend Developer</p>
+            </div>
             <ul class="soc-med-list">
               <li class="soc-med-item">
                 <a href="https://www.instagram.com/" class="soc-med-link" target="_blank">
@@ -239,8 +255,10 @@
           </li>
           <li class=" our-team-list-card">
             <img class="our-team-list-card-img" src="./images/mykola.jpg" alt="Портрет Николая" width="270">
-            <h3 class="our-team-list-card-name">Николай Тарасов</h3>
-            <p class="our-team-list-card-role" lang="en">Marketing</p>
+            <div class="our-team-list-card-capture">
+              <h3 class="our-team-list-card-name">Николай Тарасов</h3>
+              <p class="our-team-list-card-role" lang="en">Marketing</p>
+            </div>
             <ul class="soc-med-list">
               <li class="soc-med-item">
                 <a href="https://www.instagram.com/" class="soc-med-link" target="_blank">
@@ -274,8 +292,10 @@
           </li>
           <li class=" our-team-list-card">
             <img class="our-team-list-card-img" src="./images/michael.jpg" alt="Портрет Михаила" width="270">
-            <h3 class="our-team-list-card-name">Михаил Ермаков</h3>
-            <p class="our-team-list-card-role" lang="en">UI Designer</p>
+            <div class="our-team-list-card-capture">
+              <h3 class="our-team-list-card-name">Михаил Ермаков</h3>
+              <p class="our-team-list-card-role" lang="en">UI Designer</p>
+            </div>
             <ul class="soc-med-list">
               <li class="soc-med-item">
                 <a href="https://www.instagram.com/" class="soc-med-link" target="_blank">
@@ -310,56 +330,59 @@
         </ul>
       </div>
     </section>
-    <section class="clients container">
-      <h2 class="section-title">Постоянные клиенты</h2>
-      <ul class="clients-list">
-        <li class="clients-item">
-          <a href="" class="client-link" target="_blank">
-            <svg class="client-ico" width="41" height="47">
-              <use href="./images/icons.svg#icon-brand-1"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients-item">
-          <a href="" class="client-link" target="_blank">
-            <svg class="client-ico" width="40" height="52">
-              <use href="./images/icons.svg#icon-brand-2"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients-item">
-          <a href="" class="client-link" target="_blank">
-            <svg class="client-ico" width="43" height="41">
-              <use href="./images/icons.svg#icon-brand-3"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients-item">
-          <a href="" class="client-link" target="_blank">
-            <svg class="client-ico" width="84" height="41">
-              <use href="./images/icons.svg#icon-brand-4"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients-item">
-          <a href="" class="client-link" target="_blank">
-            <svg class="client-ico" width="63" height="45">
-              <use href="./images/icons.svg#icon-brand-5"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="clients-item">
-          <a href="" class="client-link" target="_blank">
-            <svg class="client-ico" width="94" height="44">
-              <use href="./images/icons.svg#icon-brand-6"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+
+    <section class="clients">
+      <div class="container">
+        <h1 class="section-title">Постоянные клиенты</h1>
+        <ul class="clients-list">
+          <li class="clients-item">
+            <a href="" class="client-link" target="_blank">
+              <svg class="client-ico" width="41" height="47">
+                <use href="./images/icons.svg#icon-brand-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients-item">
+            <a href="" class="client-link" target="_blank">
+              <svg class="client-ico" width="40" height="52">
+                <use href="./images/icons.svg#icon-brand-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients-item">
+            <a href="" class="client-link" target="_blank">
+              <svg class="client-ico" width="43" height="41">
+                <use href="./images/icons.svg#icon-brand-3"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients-item">
+            <a href="" class="client-link" target="_blank">
+              <svg class="client-ico" width="84" height="41">
+                <use href="./images/icons.svg#icon-brand-4"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients-item">
+            <a href="" class="client-link" target="_blank">
+              <svg class="client-ico" width="63" height="45">
+                <use href="./images/icons.svg#icon-brand-5"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="clients-item">
+            <a href="" class="client-link" target="_blank">
+              <svg class="client-ico" width="94" height="44">
+                <use href="./images/icons.svg#icon-brand-6"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
-  <footer>
-    <div class="footer container">
+  <footer class="footer">
+    <div class="container">
       <div class="footer-column">
         <a class="footer-logo logo list" lang="en" href="./index.html"><span class="logo-acсent">Web</span>Studio</a>
         <address>
@@ -425,6 +448,7 @@
         </form>
       </div>
     </div>
+    </address>
   </footer>
   <script src="./js/modal.js"></script>
 </body>
